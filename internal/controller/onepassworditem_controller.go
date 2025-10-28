@@ -116,6 +116,9 @@ func (r *OnePasswordItemReconciler) Reconcile(ctx context.Context, req ctrl.Requ
 		}
 		return ctrl.Result{}, err
 	}
+
+	// dummy change
+
 	// If one password finalizer exists then we must cleanup associated secrets
 	if utils.ContainsString(onepassworditem.Finalizers, finalizer) {
 
